@@ -32,7 +32,7 @@ sf::Clock _clock;
 //    }
 //    for (size_t i = 0; i < AMOUNT; i++)
 //    {
-//        results2[i] = std::atan2(std::sin(rdm2[i].y), std::cosl(rdm2[i].x));
+//        results2[i] = std::atan2(std::sin(rdm2[i].y), std::cos(rdm2[i].x));
 //    }
 //    std::cout << "Second Time :" << _clock.getElapsedTime().asSeconds() << std::endl;
 //
@@ -41,13 +41,13 @@ sf::Clock _clock;
 
 int main()
 {
-
+    srand(clock());
     float screenScale = 30;
     sf::Vector2f screenSize(16 * screenScale, 9 * screenScale);
 
     sf::RenderWindow window(sf::VideoMode(screenSize.x, screenSize.y), "SFML works!");
 
-    BoidsManager bm(screenSize, 500);
+    BoidsManager bm(screenSize, 2);
     
 
     while (window.isOpen())
@@ -62,6 +62,7 @@ int main()
 
         sf::Time eTime = _clock.getElapsedTime();
         _clock.restart();
+        if (eTime.asSeconds() > 1) eTime = _clock.getElapsedTime();
 
         //ALL Update
         bm.Update(eTime.asMicroseconds());

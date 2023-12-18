@@ -1,41 +1,30 @@
-﻿  BoidsAttack.cpp
-D:\C++\BoidsAttack\BoidsAttack\BoidsAttack.cpp(48,67): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+﻿  BoidsManager.cpp
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(59,34): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(64,15): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(71,21): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(89,72): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
           with
           [
               T=float
           ]
-D:\C++\BoidsAttack\BoidsAttack\BoidsAttack.cpp(48,53): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(89,43): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
           with
           [
               T=float
           ]
-D:\C++\BoidsAttack\BoidsAttack\BoidsAttack.cpp(67,39): warning C4244: 'argument': conversion from 'sf::Int64' to 'double', possible loss of data
-  BoidsManager.cpp
-D:\C++\BoidsAttack\BoidsAttack\BoidsManager.cpp(29,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\C++\BoidsAttack\BoidsAttack\BoidsManager.cpp(60,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\C++\BoidsAttack\BoidsAttack\BoidsManager.cpp(60,42): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\C++\BoidsAttack\BoidsAttack\BoidsManager.cpp(61,28): warning C4244: 'argument': conversion from 'int' to '_Ty', possible loss of data
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(90,28): warning C4244: 'argument' : conversion de 'int' en '_Ty', perte possible de données
           with
           [
               _Ty=float
           ]
-D:\C++\BoidsAttack\BoidsAttack\BoidsManager.cpp(65,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(97,16): warning C4244: 'initialisation' : conversion de 'T' en 'float', perte possible de données
           with
           [
               T=unsigned int
           ]
-D:\C++\BoidsAttack\BoidsAttack\BoidsManager.cpp(66,16): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
+M:\Github\BoidsAttack\BoidsAttack\BoidsAttack\BoidsManager.cpp(98,16): warning C4244: 'initialisation' : conversion de 'T' en 'float', perte possible de données
           with
           [
               T=unsigned int
           ]
-  Generating Code...
-  BoidsAttack.vcxproj -> D:\C++\BoidsAttack\x64\Debug\BoidsAttack.exe
+  BoidsAttack.vcxproj -> M:\Github\BoidsAttack\BoidsAttack\x64\Debug\BoidsAttack.exe

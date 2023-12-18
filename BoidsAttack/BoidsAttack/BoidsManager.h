@@ -17,8 +17,8 @@ public :
 
 	void AddBoid();
 private :
-	float cohesionRange = 150;
-	float alignRange = 80;
+	float cohesionRange = 100;
+	float alignRange = 50;
 	float separationRange = 40;
 
 
@@ -29,5 +29,7 @@ private :
 	std::list<float> rotation;
 
 	sf::Texture boidTexture;
+
+	void AddBoid(sf::Color col);
 };
 
