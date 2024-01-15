@@ -35,11 +35,12 @@ void BoidsManager::Update(double eTime)
 	std::list<float>::iterator rotationIt = rotation.begin();
 	for (std::list<sf::Vector2f>::iterator it = positions.begin(); it != positions.end(); it++,rotationIt++)
 	{
+		bool first = it == positions.begin();
 		sf::Vector2f pos = *it;
 		sf::Vector2f offset(0,0);
 		for (std::list<sf::Vector2f>::iterator neighboorIt = positions.begin(); neighboorIt != positions.end(); neighboorIt++)
 		{
-			if (*it == *neighboorIt)continue;
+			if (*it == *neighboorIt )continue;
 			sf::Vector2f dir = *neighboorIt - *it;
 			float dist = GetMagnitude(dir);
 			dir /= dist;
@@ -50,9 +51,11 @@ void BoidsManager::Update(double eTime)
 
 		}
 
-		if (offset != sf::Vector2f(0, 0)) {
-			float offsetAngle = std::atan2(offset.y, offset.x);
-			offsetAngle *=180;// * 360 / (2 * PI);
+		if (offset != sf::Vector2f(0, 0) && first) {
+			float dot = offset.x * 0 + offset.y * 1; //Dot product : Ax*Bx + Ay*By
+			float offsetAngle = std::acos(dot / std::abs(GetMagnitude(offset)*1)); // angle : cos 0 = A.B/|A|*|B| => 0 = acos("")
+			//offsetAngle = std::acos(offset.x);
+			offsetAngle = offsetAngle * 180 / PI; // Radian to Degrees
 			float leftAngle = *rotationIt - offsetAngle ;
 			if (leftAngle < 0)leftAngle += 360;
 
