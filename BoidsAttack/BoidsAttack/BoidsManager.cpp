@@ -46,18 +46,17 @@ void BoidsManager::Update(double eTime)
 			dir /= dist;
 			if (dist > cohesionRange)continue;
 			if (dist > alignRange) offset += dir;
-			else if (dist < separationRange) 
-				offset -= dir;
+			else if (dist < separationRange) offset -= dir;
 
 		}
 
-		if (offset != sf::Vector2f(0, 0) && first) {
+		if (offset != sf::Vector2f(0, 0)) {
+			Normalize(offset);
 			float dot = offset.x * 0 + offset.y * 1; //Dot product : Ax*Bx + Ay*By
-			float offsetAngle = std::acos(dot / std::abs(GetMagnitude(offset)*1)); // angle : cos 0 = A.B/|A|*|B| => 0 = acos("")
-			//offsetAngle = std::acos(offset.x);
+			float offsetAngle = std::acos(offset.x); // angle : cos 0 = A.B/|A|*|B| => 0 = acos("")
 			offsetAngle = offsetAngle * 180 / PI; // Radian to Degrees
+			if (offset.y < 0)offsetAngle = 360-offsetAngle; 
 			float leftAngle = *rotationIt - offsetAngle ;
-			if (leftAngle < 0)leftAngle += 360;
 
 			offsetAngle = eTime * 0.0001f * (leftAngle < 180 ? -1 : 1);
 			*rotationIt += offsetAngle;
